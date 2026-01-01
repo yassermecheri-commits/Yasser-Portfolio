@@ -1,0 +1,93 @@
+.skills {
+  padding: 5rem 0;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.subtitle {
+  color: hsl(var(--primary));
+  font-family: "Fira Code", monospace;
+  margin-bottom: 0.5rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  font-family: "Fira Code", monospace;
+}
+
+.title span {
+  color: hsl(var(--primary));
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.card {
+  background-color: hsl(var(--card));
+  border: 1px solid hsl(var(--border));
+  border-radius: 1rem;
+  padding: 1.5rem;
+}
+
+.cardTitle {
+  font-size: 1.25rem;
+  font-weight: bold;
+  font-family: "Fira Code", monospace;
+  color: hsl(var(--primary));
+  margin-bottom: 1.5rem;
+}
+
+.skillList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.skillHeader {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.skillName {
+  font-weight: 500;
+  color: hsl(var(--foreground));
+}
+
+.skillLevel {
+  font-size: 0.875rem;
+  color: hsl(var(--muted-foreground));
+}
+
+.progressBar {
+  height: 0.5rem;
+  background-color: hsl(var(--secondary));
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    hsl(var(--primary)),
+    hsl(var(--accent))
+  );
+  border-radius: 999px;
+  transition: width 1s ease;
+}
