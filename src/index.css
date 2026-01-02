@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700&display=swap');
 
-/* ===============================
-   Global CSS Variables (Design System)
-================================ */
+
 :root {
   --background: 220 20% 10%;
   --foreground: 210 40% 98%;
@@ -53,9 +51,6 @@
   --font-body: 'Inter', sans-serif;
 }
 
-/* ===============================
-   Global Reset & Base Styles
-================================ */
 * {
   margin: 0;
   padding: 0;
@@ -78,9 +73,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-display);
 }
 
-/* ===============================
-   Animations
-================================ */
+
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -110,9 +103,6 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-/* ===============================
-   Utility Animations (Global)
-================================ */
 .animate-fade-in-up {
   animation: fadeInUp 0.6s ease-out forwards;
 }
@@ -123,4 +113,9 @@ h1, h2, h3, h4, h5, h6 {
 
 .animate-float {
   animation: float 3s ease-in-out infinite;
+}
+
+.scrollButton:hover {
+  box-shadow: 0 0 25px rgba(99, 102, 241, 0.8);
+  background: linear-gradient(135deg, #a855f7 0%, #6366f1 100%);
 }

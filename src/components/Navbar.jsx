@@ -3,9 +3,9 @@ import { Menu, X } from "lucide-react";
 import styles from "./Navbar.module.css";
 
 const navLinks = [
-  { href: "#home", label: "Accueil" },
-  { href: "#projects", label: "Projets" },
-  { href: "#skills", label: "Compétences" },
+  { href: "#hero", label: "Home" },
+  { href: "#projects", label: "Projects" },
+  { href: "#skills", label: "Skills" },
   { href: "#experience", label: "Expérience" },
   { href: "#blogs", label: "Blogs" },
   { href: "#contact", label: "Contact" },
@@ -16,13 +16,15 @@ function Navbar() {
 
   return (
     <nav className={styles.navbar}>
-      <div className="container mx-auto px-4">
+      <div className={styles.container}>
         <div className={styles.inner}>
-          <a href="#home" className={styles.logo}>
-            
-          </a>
+          
 
-          {/* Desktop */}
+          <div className={styles.logoSection}>
+            <a href="#hero" className={styles.logo}>YL</a>
+          </div>
+
+          
           <div className={styles.desktopMenu}>
             {navLinks.map((link) => (
               <a key={link.href} href={link.href} className={styles.link}>
@@ -31,16 +33,17 @@ function Navbar() {
             ))}
           </div>
 
-          {/* Mobile button */}
+          
           <button
             onClick={() => setIsOpen(!isOpen)}
             className={styles.menuButton}
+            aria-label="Toggle menu"
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
 
-        {/* Mobile menu */}
+       
         {isOpen && (
           <div className={styles.mobileMenu}>
             {navLinks.map((link) => (

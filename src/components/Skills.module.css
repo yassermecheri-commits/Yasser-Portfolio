@@ -13,12 +13,6 @@
   margin-bottom: 4rem;
 }
 
-.subtitle {
-  color: hsl(var(--primary));
-  font-family: "Fira Code", monospace;
-  margin-bottom: 0.5rem;
-}
-
 .title {
   font-size: 2.5rem;
   font-weight: bold;
@@ -42,13 +36,21 @@
   border: 1px solid hsl(var(--border));
   border-radius: 1rem;
   padding: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+
+.card:hover {
+  border-color: var(--category-color);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px -15px var(--category-color);
 }
 
 .cardTitle {
   font-size: 1.25rem;
   font-weight: bold;
   font-family: "Fira Code", monospace;
-  color: hsl(var(--primary));
+  color: var(--category-color);
   margin-bottom: 1.5rem;
 }
 
@@ -83,11 +85,7 @@
 
 .progress {
   height: 100%;
-  background: linear-gradient(
-    to right,
-    hsl(var(--primary)),
-    hsl(var(--accent))
-  );
   border-radius: 999px;
   transition: width 1s ease;
+  box-shadow: 0 0 8px var(--category-color);
 }

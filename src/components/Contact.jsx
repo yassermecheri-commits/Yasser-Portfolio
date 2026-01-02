@@ -3,10 +3,10 @@ import { Mail, Send, Github, MapPin } from "lucide-react";
 import styles from "./Contact.module.css";
 
 function Contact() {
-  // Remplacez "VOTRE_ID" par l'ID fourni par Formspree
+ 
   const [state, handleSubmit] = useForm("xbdllqor");
 
-  // Message de confirmation après envoi réussi
+  
   if (state.succeeded) {
     return (
       <section id="contact" className={styles.section}>
@@ -27,22 +27,32 @@ function Contact() {
         </div>
 
         <div className={styles.grid}>
-          {/* Section Gauche : Infos */}
+        
           <div>
-            <h3 className={styles.infoTitle}>Work With Me!</h3>
-            <div className={styles.infoList}>
-              <div className={styles.infoCard}>
-                <div className={styles.iconBox}><Mail size={20} /></div>
-                <div>
-                  <p className={styles.infoLabel}>Email</p>
-                  <p className={styles.infoValue}>yasser.mecheri@univ-constantine2.dz</p>
-                </div>
-              </div>
-              {/* ... Autres infos ... */}
-            </div>
+  <h3 className={styles.infoTitle}>Work With Me!</h3>
+  <div className={styles.infoList}>
+    
+
+    <div className={styles.infoCard}>
+      <div className={styles.iconBox}><Mail size={20} /></div>
+      <div>
+        <p className={styles.infoLabel}>Email</p>
+        <p className={styles.infoValue}>yasser.mecheri@univ-constantine2.dz</p>
+      </div>
+    </div>
+
+
+    <div className={styles.infoCard}>
+          <div className={styles.iconBox}><MapPin size={20} /></div>
+             <div>
+        <p className={styles.infoLabel}>Location</p>
+        <p className={styles.infoValue}>Constantine, Algeria</p>
+             </div>
           </div>
 
-          {/* Formulaire Connecté à Formspree */}
+        </div>
+    </div>
+
           <form onSubmit={handleSubmit} className={styles.form}>
             <div className={styles.field}>
               <label htmlFor="name">Nom</label>

@@ -3,6 +3,7 @@ import styles from "./Skills.module.css";
 const skillCategories = [
   {
     title: "Languages",
+    color: "#3b82f6", 
     skills: [
       { name: "JavaScript", level: 85 },
       { name: "HTML5", level: 95 },
@@ -11,6 +12,7 @@ const skillCategories = [
   },
   {
     title: "Frameworks",
+    color: "#10b981",
     skills: [
       { name: "React", level: 80 },
       { name: "Tailwind CSS", level: 75 },
@@ -18,11 +20,22 @@ const skillCategories = [
   },
   {
     title: "Outils",
+    color: "#f59e0b", 
     skills: [
       { name: "Vite", level: 85 },
       { name: "Git", level: 80 },
       { name: "NPM", level: 75 },
       { name: "VS Code", level: 90 },
+    ],
+  },
+  {
+    title: "Others",
+    color: "#a855f7", 
+    skills: [
+      { name: "Java/JavaFX", level: 80 },
+      { name: "C++", level: 75 },
+      { name: "IoT", level: 70 },
+      { name: "AI/ML Basics", level: 65 },
     ],
   },
 ];
@@ -39,7 +52,11 @@ const Skills = () => {
 
         <div className={styles.grid}>
           {skillCategories.map((category) => (
-            <div key={category.title} className={styles.card}>
+            <div 
+              key={category.title} 
+              className={styles.card}
+              style={{ "--category-color": category.color }}
+            >
               <h3 className={styles.cardTitle}>{category.title}</h3>
 
               <div className={styles.skillList}>
@@ -55,7 +72,10 @@ const Skills = () => {
                     <div className={styles.progressBar}>
                       <div
                         className={styles.progress}
-                        style={{ width: `${skill.level}%` }}
+                        style={{ 
+                          width: `${skill.level}%`,
+                          backgroundColor: category.color 
+                        }}
                       />
                     </div>
                   </div>
