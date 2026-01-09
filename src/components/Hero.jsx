@@ -3,10 +3,10 @@ import styles from "./Hero.module.css";
 
 const Hero = () => {
   return (
-    <section  id="hero" className={styles.hero}>
+    <section id="hero" className={styles.hero}>
       <div className={styles.container}>
         
-       
+        {/* Colonne Avatar */}
         <div className={`${styles.leftColumn} animate-fade-up`}>
           <div className={`${styles.avatarContainer} animate-float`}>
             <div className={styles.avatarWrapper}>
@@ -22,19 +22,12 @@ const Hero = () => {
           </div>
         </div>
 
-       
+        {/* Colonne Texte */}
         <div className={`${styles.centerColumn} animate-fade-up`}>
-          <p className={styles.greeting}>
-            Hi, I am 
-          </p>
-          <h1 className={styles.name}>
-            Yasser
-          </h1>
-          <p className={styles.subtitle}>
-            Luca React Developer & UI Designer
-          </p>
+          <p className={styles.greeting}>Hi, I am</p>
+          <h1 className={styles.name}>Yasser</h1>
+          <p className={styles.subtitle}>Luca React Developer & UI Designer</p>
 
-         
           <p className={styles.description}>
             Passionate software engineering student crafting scalable full-stack and mobile solutions 
             using Flutter, Django, React, and MySQL, with experience in IoT and AI-driven applications.
@@ -52,7 +45,7 @@ const Hero = () => {
           </div>
         </div>
 
-        
+        {/* Colonne Fenêtre de Code */}
         <div className={`${styles.rightColumn} animate-slide-in-right`}>
           <div className={styles.codeWindow}>
             <div className={styles.codeHeader}>
